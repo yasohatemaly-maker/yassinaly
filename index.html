@@ -24,14 +24,16 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem
 nav .d{font-size:1.6rem}
 nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;font-weight:500;font-size:.95rem}
 nav a{text-decoration:none}nav a:hover{color:var(--boot)}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center;padding:1rem 0 4rem}
+
+/* Hero styling without side image */
+.hero{padding:2rem 0 4rem}
 .hero h1{font-size:clamp(4.2rem,13vw,10.5rem);margin:0 0 1.5rem}
 .hero h1 span{color:var(--boot)}
 .hero p{max-width:34rem;font-size:1.2rem;margin:0 0 1.6rem}
 
-/* Fixed hero photo sizing and scaling */
-.hero .photo{width:100%;aspect-ratio:4/5;overflow:hidden;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
-.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+/* Large image container under Ventures */
+.hero-photo-large{margin-top:3rem;width:100%;border-radius:6px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,0.12)}
+.hero-photo-large img{width:100%;max-height:800px;object-fit:cover;object-position:center}
 
 .btns{display:flex;gap:.8rem;flex-wrap:wrap}
 .btn{display:inline-block;padding:.85rem 1.4rem;border:2px solid var(--fg);font-weight:700;text-decoration:none;border-radius:2px}
@@ -70,8 +72,7 @@ footer p{color:var(--mute);margin:0 0 1.5rem}
 .social-btn.linkedin{background:#0a66c2}
 
 @media (max-width:820px){
-.hero,.two{grid-template-columns:1fr}
-.hero .photo{aspect-ratio:3/4}
+.two{grid-template-columns:1fr}
 .stats{grid-template-columns:1fr 1fr}
 .gal{grid-template-columns:1fr 1fr}
 .biz li{grid-template-columns:1fr;gap:.6rem}
@@ -93,7 +94,6 @@ nav ul{gap:.9rem;font-size:.85rem}}
 <p>I play football for FC Athletica and run three businesses.</p>
 <div class="btns"><a class="btn p" href="#football">See the football</a><a class="btn" href="#ventures">See the entrepreneurship</a></div>
 </div>
-<div class="photo"><img src="hero.jpg" alt="Number 19 in a black kit warming up on a pitch in Dubai" width="854" height="1280"></div>
 </header>
 </div>
 
@@ -118,8 +118,13 @@ nav ul{gap:.9rem;font-size:.85rem}}
 </div></section>
 
 <section id="ventures"><div class="wrap">
-<h2 class="d">Ventures</h2>
+<h2 class="d" id="entrepreneurship">Ventures</h2>
 <ul class="biz"><li><div><div class="logo"><img src="truefunded.png" alt="Truefunded logo"></div><h3 class="d">Truefunded</h3></div><div><p>A proprietary trading firm built around market structure analysis, quantitative capital allocation and the digital infrastructure behind both.</p><em>Trading</em><a class="visit" href="https://tradetruefunded.com" target="_blank" rel="noopener">Visit tradetruefunded.com</a></div></li><li><div><div class="logo"><img src="connection.jpg" alt="Connection Rentals logo"></div><h3 class="d">Connection Rentals</h3></div><div><p>An exotic and luxury vehicle rental company. I handle fleet logistics, the client acquisition pipeline and every digital touchpoint.</p><em>Luxury vehicles</em><a class="visit" href="https://connectionrentals.vercel.app" target="_blank" rel="noopener">Visit connectionrentals.vercel.app</a></div></li><li><div><div class="logo"><img src="voltafest.png" alt="Volta Fest logo"></div><h3 class="d">Volta Fest</h3></div><div><p>A 5v5 football championship that I founded. Volta Fest brings players and teams together for tournaments and events across Dubai.</p><em>Football events</em><a class="visit" href="https://voltafest.site" target="_blank" rel="noopener">Visit voltafest.site</a></div></li></ul>
+
+<!-- Large full-width image placed under the Ventures section -->
+<div class="hero-photo-large">
+  <img src="hero.jpg" alt="Number 19 in a black kit warming up on a pitch in Dubai" width="1180" height="800">
+</div>
 </div></section>
 
 <footer id="contact"><div class="wrap">
