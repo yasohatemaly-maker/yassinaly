@@ -24,12 +24,15 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem
 nav .d{font-size:1.6rem}
 nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;font-weight:500;font-size:.95rem}
 nav a{text-decoration:none}nav a:hover{color:var(--boot)}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:end;padding:1rem 0 4rem}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center;padding:1rem 0 4rem}
 .hero h1{font-size:clamp(4.2rem,13vw,10.5rem);margin:0 0 1.5rem}
 .hero h1 span{color:var(--boot)}
 .hero p{max-width:34rem;font-size:1.2rem;margin:0 0 1.6rem}
-.hero .photo{aspect-ratio:2/3;overflow:hidden;border-radius:4px}
-.hero .photo img{width:100%;height:100%;object-fit:cover}
+
+/* Fixed hero photo sizing and scaling */
+.hero .photo{width:100%;aspect-ratio:4/5;overflow:hidden;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+
 .btns{display:flex;gap:.8rem;flex-wrap:wrap}
 .btn{display:inline-block;padding:.85rem 1.4rem;border:2px solid var(--fg);font-weight:700;text-decoration:none;border-radius:2px}
 .btn.p{background:var(--fg);color:var(--bg)}
